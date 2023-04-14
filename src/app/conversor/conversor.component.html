@@ -1,0 +1,32 @@
+<h2 style="margin-top: 55px; text-align: center;">Conversor de Unidades de Comprimento</h2>
+<hr>
+<div class="mx-auto p-5" style="width: 400px;">
+  <form>
+    <form class="form-floating">
+      <input type="number" class="form-control" [(ngModel)]="valorInicial" name="valorInicial">
+      <label for="floatingInputValue">Comprimento Inicial</label>
+    </form>
+    <br>
+    <div class="form-floating">
+      <select class="form-select" aria-label="Floating label select example" [(ngModel)]="unidadeSelecionada" name="unidadeSelecionada">
+        <option [ngValue]="'metro'">Metro</option>
+        <option [ngValue]="'quilometro'">Quilômetro</option>
+        <option [ngValue]="'milha'">Milha</option>
+      </select>
+      <label for="floatingSelect">Selecione a UNIDADE</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <select class="form-select" aria-label="Floating label select example" [(ngModel)]="unidadeConvertida" name="unidadeConvertida">
+        <option [ngValue]="'metro'">Metro</option>
+        <option [ngValue]="'quilometro'">Quilômetro</option>
+        <option [ngValue]="'milha'">Milha</option>
+      </select>
+      <label>Selecione a nova UNIDADE</label>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success" style="width: 305px;" (click)="converter()">CONVERTER</button>
+    <br><br>
+    <input type="number" class="form-control border-success" [value]="valorConvertido" name="valorConvertido" style="text-align: center;" readonly>
+  </form>
+</div>
